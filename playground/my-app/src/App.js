@@ -1,19 +1,23 @@
 //import React, { useState } from "react";
 
 function App() {
-  const reverseWord = (word) => {
-    return word.split("").reverse().join("");
-  };
+  const findVowels = (word) => {
+    const vowels = ["a", "e", "i", "o", "u"];
 
-  const palindrome = (word) => {
-    if (word === reverseWord(word)) {
-      console.log("true");
-    } else {
-      console.log("false");
+    let result = [];
+    let count = 0;
+
+    for (let char of word) {
+      if (vowels.includes(char)) {
+        result.push(char);
+        count++;
+      }
+      console.log(result);
+      console.log(count);
     }
   };
 
-  palindrome("racecar");
+  findVowels("likwazi");
 
   return <div className="App">hello</div>;
 }
